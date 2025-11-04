@@ -1,1 +1,16 @@
+server:
+  port: 8085
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/auth_db_hackathon?createDatabaseIfNotExist=true
+    username: root
+    password: 5106
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+jwt:
+  secret: my_super_secret_key_change_in_prod_please
 
