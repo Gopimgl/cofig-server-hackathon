@@ -1,2 +1,25 @@
 jwt:
   secret: my_super_secret_key_change_in_prod_please
+
+server:
+  port: 8080
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: employee
+          uri: http://localhost:8081
+          predicates:
+            - Path=/employees/**
+        - id: finance
+          uri: http://localhost:8082
+          predicates:
+            - Path=/finance/**
+        - id: sales
+          uri: http://localhost:8083
+          predicates:
+            - Path=/sales/**
+        - id: auth
+          uri: http://localhost:8085
+          predicates:
+            - Path=/auth/**
