@@ -14,3 +14,4 @@ spring:
 jwt:
   secret: my_super_secret_key_change_in_prod_please
 
+msg:hi gopi
